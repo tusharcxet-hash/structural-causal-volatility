@@ -1,0 +1,20 @@
+data:
+  n_assets: 10
+  n_days: 300
+  random_seed: 42
+  factor_columns: [Mkt-RF, SMB, HML]
+residualization:
+  use_intercept: true
+causal:
+  dagma_lambda1: 0.1
+  dagma_max_iter: 200
+  dagma_w_threshold: 0.3
+drift:
+  window: 60
+  threshold_percentile: 95
+forecast:
+  n_splits: 2
+risk:
+  atr_window: 14
+  atr_multiplier: 2.0
+  ratchet_floor: 0.0
